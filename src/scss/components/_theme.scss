@@ -1,0 +1,36 @@
+body[data-theme='dark'] {
+	background-color: map-get($darkColors, veryDarkBlue);
+	.header {
+		background-color: map-get($darkColors, darkBlueText);
+		box-shadow: none;
+		&__title {
+			color: map-get($lightColors, whiteTheme);
+		}
+		&__theme {
+			color: map-get($lightColors, whiteTheme);
+		}
+	}
+	.main__form .form__search {
+		background-color: map-get($darkColors, darkBlueText);
+		color: map-get($lightColors, whiteTheme);
+		.form__input {
+			background-color: inherit;
+			color: inherit;
+		}
+	}
+	.main__form .form__select {
+		background-color: map-get($darkColors, darkBlueText);
+		color: map-get($lightColors, whiteTheme);
+		&-option {
+			background-color: map-get($darkColors, darkBlueText);
+		}
+	}
+	.countries__country {
+		background-color: map-get($darkColors, darkBlueText);
+		color: map-get($lightColors, whiteTheme);
+	}
+	.countries__pagination {
+		border-color: map-get($lightColors, whiteTheme);
+		color: map-get($lightColors, whiteTheme);
+	}
+}

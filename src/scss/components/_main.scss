@@ -1,0 +1,45 @@
+.main {
+	margin-top: 5rem;
+	padding: 0 10rem;
+	&__form {
+		display: flex;
+		@include flex();
+		justify-content: space-between;
+		.form__search {
+			display: flex;
+			@include flex();
+			justify-content: space-between;
+			width: 40%;
+			height: 5vh;
+			background-color: map-get($lightColors, whiteTheme);
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+			border-radius: 5px;
+			& > * {
+				height: 100%;
+			}
+		}
+		.form__icon {
+			font-size: 1.5rem;
+			margin: 0 2em;
+		}
+		.form__input {
+			flex-grow: 1;
+			border: none;
+			color: map-get($darkColors, darkGrayInput);
+			font-weight: map-get($fontWeights, lightWeight);
+			&:focus {
+				outline: none;
+			}
+		}
+		.form__select {
+			padding: 1em;
+			border: none;
+			border-radius: 5px;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+			cursor: pointer;
+			&-option {
+				background-color: map-get($lightColors, whiteTheme);
+			}
+		}
+	}
+}

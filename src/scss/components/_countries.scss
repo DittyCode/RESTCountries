@@ -1,0 +1,29 @@
+.countries {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 10rem 0;
+	position: relative;
+	&__country {
+		width: 23%;
+		min-height: 30vh;
+		margin: 1em;
+		background-color: map-get($lightColors, whiteTheme);
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+		border-radius: 5px;
+	}
+	&__description {
+		margin: 1em;
+	}
+	&__pagination {
+		position: absolute;
+		bottom: -10%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1px solid black;
+		background-color: transparent;
+		padding: 1em 2em;
+		cursor: pointer;
+		text-transform: uppercase;
+	}
+}

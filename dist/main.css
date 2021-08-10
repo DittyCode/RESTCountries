@@ -36,6 +36,12 @@ img {
   padding: 0 10rem;
   background-color: white;
   box-shadow: 4px 4px 0px 0px #fdf2f2; }
+  @media (max-width: 700px) {
+    .header {
+      padding: 0 5rem; } }
+  @media (max-width: 440px) {
+    .header {
+      padding: 0 2rem; } }
   .header__title {
     color: #2b3945; }
   .header__theme {
@@ -49,12 +55,22 @@ img {
 .main {
   margin-top: 5rem;
   padding: 0 10rem; }
+  @media (max-width: 700px) {
+    .main {
+      padding: 0 5rem; } }
+  @media (max-width: 440px) {
+    .main {
+      padding: 0 2rem; } }
   .main__form {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     justify-content: space-between; }
+    @media (max-width: 700px) {
+      .main__form {
+        flex-direction: column;
+        align-items: flex-start; } }
     .main__form .form__search {
       display: flex;
       flex-direction: row;
@@ -68,15 +84,22 @@ img {
       border-radius: 5px; }
       .main__form .form__search > * {
         height: 100%; }
+      @media (max-width: 700px) {
+        .main__form .form__search {
+          margin-bottom: 5em; } }
     .main__form .form__icon {
       font-size: 1.5rem;
       margin: 0 2em; }
     .main__form .form__input {
       flex-grow: 1;
       border: none;
+      min-width: 20em;
       font-weight: 300; }
       .main__form .form__input:focus {
         outline: none; }
+      @media (max-width: 440px) {
+        .main__form .form__input {
+          min-width: 15em; } }
     .main__form .form__select {
       padding: 1em;
       border: none;
@@ -92,6 +115,10 @@ img {
   flex-wrap: wrap;
   margin: 10rem 0;
   position: relative; }
+  @media (max-width: 700px) {
+    .countries {
+      flex-direction: column;
+      align-items: center; } }
   .countries__country {
     width: 23%;
     min-height: 30vh;
@@ -99,6 +126,15 @@ img {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     border-radius: 5px; }
+    @media (max-width: 1190px) {
+      .countries__country {
+        width: 28%; } }
+    @media (max-width: 890px) {
+      .countries__country {
+        width: 45%; } }
+    @media (max-width: 700px) {
+      .countries__country {
+        width: 80%; } }
   .countries__description {
     margin: 1em; }
   .countries__pagination {

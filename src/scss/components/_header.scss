@@ -7,6 +7,12 @@
 	padding: 0 10rem;
 	background-color: map-get($lightColors, whiteTheme);
 	box-shadow: 4px 4px 0px 0px map-get($lightColors, boxShadowColors);
+	@include mq(700px) {
+		padding: 0 5rem;
+	}
+	@include mq(440px) {
+		padding: 0 2rem;
+	}
 	&__title {
 		color: map-get($darkColors, darkBlueText);
 	}

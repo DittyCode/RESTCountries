@@ -1,10 +1,20 @@
 .main {
 	margin-top: 5rem;
 	padding: 0 10rem;
+	@include mq(700px) {
+		padding: 0 5rem;
+	}
+	@include mq(440px) {
+		padding: 0 2rem;
+	}
 	&__form {
 		display: flex;
 		@include flex();
 		justify-content: space-between;
+		@include mq(700px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 		.form__search {
 			display: flex;
 			@include flex();
@@ -17,6 +27,9 @@
 			& > * {
 				height: 100%;
 			}
+			@include mq(700px) {
+				margin-bottom: 5em;
+			}
 		}
 		.form__icon {
 			font-size: 1.5rem;
@@ -25,10 +38,14 @@
 		.form__input {
 			flex-grow: 1;
 			border: none;
+			min-width: 20em;
 			color: map-get($darkColors, darkGrayInput);
 			font-weight: map-get($fontWeights, lightWeight);
 			&:focus {
 				outline: none;
+			}
+			@include mq(440px) {
+				min-width: 15em;
 			}
 		}
 		.form__select {

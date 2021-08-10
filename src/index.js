@@ -18,7 +18,11 @@ dom.i2svg();
 const themeSwitcher = document.querySelector('[data-themeBtn]');
 const buttonPagination = document.querySelector('[data-pagination]');
 
-themeSwitcher.addEventListener('click', themeSwitch);
+document.body.dataset.theme = localStorage.getItem('theme');
+
+const theme = localStorage.getItem('theme');
+
+themeSwitcher.addEventListener('click', () => themeSwitch(theme));
 
 buttonPagination.addEventListener('click', pagination);
 

@@ -1,6 +1,8 @@
 .main {
+	position: relative;
 	margin-top: 5rem;
 	padding: 0 10rem;
+	min-height: 85vh;
 	@include mq(700px) {
 		padding: 0 5rem;
 	}
@@ -29,6 +31,7 @@
 			}
 			@include mq(700px) {
 				margin-bottom: 5em;
+				box-shadow: none;
 			}
 		}
 		.form__icon {

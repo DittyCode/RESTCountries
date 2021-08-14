@@ -15,6 +15,8 @@ library.add(fas, far, fab);
 
 dom.i2svg();
 
+countriesAPI();
+
 const themeSwitcher = document.querySelector('[data-themeBtn]');
 const buttonPagination = document.querySelector('[data-pagination]');
 
@@ -25,5 +27,3 @@ const theme = localStorage.getItem('theme');
 themeSwitcher.addEventListener('click', () => themeSwitch(theme));
 
 buttonPagination.addEventListener('click', pagination);
-
-countriesAPI();

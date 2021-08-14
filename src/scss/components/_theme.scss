@@ -33,4 +33,10 @@ body[data-theme='dark'] {
 		border-color: map-get($lightColors, whiteTheme);
 		color: map-get($lightColors, whiteTheme);
 	}
+	.details__description {
+		color: map-get($lightColors, whiteTheme);
+	}
+	.special {
+		color: map-get($lightColors, whiteTheme);
+	}
 }

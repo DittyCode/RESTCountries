@@ -9,3 +9,14 @@
 		@content;
 	}
 }
+
+@mixin WH($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin positioning($position, $bottom: 0, $left: 0) {
+	position: $position;
+	bottom: $bottom;
+	left: $left;
+}

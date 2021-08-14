@@ -1,9 +1,9 @@
 .countries {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin: 10rem 0;
-	position: relative;
+	margin: 10em 0;
 	@include mq(700px) {
 		flex-direction: column;
 		align-items: center;
@@ -15,7 +15,7 @@
 		height: auto;
 		margin: 1em;
 		background-color: map-get($lightColors, whiteTheme);
-		box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+		box-shadow: 0px 5px 15px map-get($darkColors, boxShadowDarkColor);
 		border-radius: 5px;
 		cursor: pointer;
 		@include mq(1190px) {
@@ -31,8 +31,7 @@
 	&__image {
 		flex-grow: 1;
 		&-flag {
-			height: 100%;
-			width: 100%;
+			@include WH(100%, 100%);
 		}
 	}
 	&__description {
@@ -45,49 +44,41 @@
 		font-size: 1.7rem;
 	}
 	&__pagination {
-		position: absolute;
-		bottom: -10%;
-		left: 50%;
+		@include positioning(absolute, -10%, 50%);
 		transform: translate(-50%, -50%);
+		padding: 1em 2em;
 		border: 1px solid black;
 		background-color: transparent;
-		padding: 1em 2em;
-		cursor: pointer;
 		text-transform: uppercase;
+		cursor: pointer;
 	}
 	&__detail {
 		display: flex;
 		@include flex();
+		@include WH(100%, 100%);
+		@include positioning(relative, 100%, 0);
 		justify-content: space-around;
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
 		z-index: 1;
-		padding: 6rem;
+		padding: 6em;
 		font-size: 1.3rem;
 		@include mq(700px) {
 			flex-direction: column;
 			align-items: flex-start;
-			padding: 3rem 1rem;
+			padding: 3em 1em;
 		}
 		&-name {
 			font-size: 2.5rem;
 			margin-bottom: 1em;
 		}
 		&-img {
-			width: 50%;
-			height: 50%;
+			@include WH(50%, 50%);
 			min-width: 250px;
 		}
 		&-back {
-			position: absolute;
-			top: 0;
-			left: 0;
-			padding: 1rem 2rem;
+			@include positioning(absolute, 100%, 0);
+			padding: 1em 2em;
 			background-color: map-get($lightColors, whiteTheme);
-			box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+			box-shadow: 0px 5px 15px map-get($darkColors, boxShadowDarkColor);
 			border-radius: 5px;
 			border: none;
 			cursor: pointer;
@@ -97,8 +88,8 @@
 		}
 		.details__description {
 			display: flex;
-			width: 60%;
 			@include flex(column);
+			width: 60%;
 			justify-content: space-around;
 			@include mq(700px) {
 				@include flex(row, flex-start, flex-start);
@@ -120,22 +111,21 @@
 				}
 				&-title {
 					@include mq(700px) {
+						margin: 0 0 1em 0.5em;
 						font-size: 2.5rem;
-						margin-bottom: 1em;
-						margin-left: 0.5em;
 						text-align: center;
 					}
 				}
 				.details__button {
-					background-color: map-get($lightColors, whiteTheme);
 					margin: 0 0.5em;
-					padding: 0.7rem 1.2rem;
+					padding: 0.7em 1.2em;
+					background-color: map-get($lightColors, whiteTheme);
 					border: none;
-					box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+					box-shadow: 0px 5px 15px map-get($darkColors, boxShadowDarkColor);
 					border-radius: 5px;
 					cursor: pointer;
 					@include mq(700px) {
-						padding: 1rem 2rem;
+						padding: 1em 2em;
 						margin-top: 1em;
 					}
 				}
@@ -153,13 +143,11 @@
 					}
 					@include mq(700px) {
 						width: 100%;
-						margin-left: 0;
-						margin-top: 5em;
+						margin: 5em 0 0 0;
 					}
 				}
 				.details__right {
-					margin-left: 3em;
-					margin-top: 3.5em;
+					margin: 3.5em 0 0 3em;
 					& > * {
 						margin-bottom: 2em;
 					}

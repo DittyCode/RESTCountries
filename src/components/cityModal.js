@@ -1,4 +1,4 @@
-import { createHTMLElement } from './countriesAPI';
+import { createHTMLElement, createContainer } from './countriesAPI';
 
 const modalContainer = document.querySelector('.main');
 
@@ -9,14 +9,25 @@ export const eachCity = async cityName => {
 		const data = await response.json();
 		await managementContainer('none');
 		await renderModal(data[0]);
-	} catch (error) {
-		console.warn(error);
+	} catch {
+		await managementContainer('flex');
+		console.warn(`API dont have data about this country.`);
 	}
 };
 
 const managementContainer = style => {
 	const containerItems = [...modalContainer.children];
 	containerItems.map(item => (item.style.display = style));
+};
+
+const borderCountries = () => {
+	const borderButtons = [...document.querySelectorAll('.details__button')];
+	borderButtons.forEach(borderButton =>
+		borderButton.addEventListener('click', e => {
+			eachCity(e.target.dataset.countrycode);
+			document.querySelector('.countries__detail').remove();
+		})
+	);
 };
 
 const renderModal = data => {
@@ -151,4 +162,6 @@ const renderModal = data => {
 	modal.appendChild(modalDescription);
 	modal.appendChild(modalBackButton);
 	modalContainer.appendChild(modal);
+
+	borderCountries();
 };

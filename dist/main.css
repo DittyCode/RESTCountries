@@ -33,36 +33,36 @@ img {
   justify-content: space-between;
   height: 10vh;
   min-height: 10vh;
-  padding: 0 10rem;
+  padding: 0 10em;
   background-color: white;
   box-shadow: 4px 4px 0px 0px #fdf2f2; }
   @media (max-width: 700px) {
     .header {
-      padding: 0 5rem; } }
+      padding: 0 5em; } }
   @media (max-width: 440px) {
     .header {
-      padding: 0 2rem; } }
+      padding: 0 2em; } }
   .header__title {
     color: #2b3945; }
   .header__theme {
-    color: #111517;
     padding: 0.5em;
-    background: transparent;
     border: none;
+    background: transparent;
+    color: #111517;
     font-size: 1.4rem;
     cursor: pointer; }
 
 .main {
   position: relative;
-  margin-top: 5rem;
-  padding: 0 10rem;
-  min-height: 85vh; }
+  min-height: 85vh;
+  margin-top: 5em;
+  padding: 0 10em; }
   @media (max-width: 700px) {
     .main {
-      padding: 0 5rem; } }
+      padding: 0 5em; } }
   @media (max-width: 440px) {
     .main {
-      padding: 0 2rem; } }
+      padding: 0 2em; } }
   .main__form {
     display: flex;
     flex-direction: row;
@@ -94,9 +94,9 @@ img {
       font-size: 1.5rem;
       margin: 0 2em; }
     .main__form .form__input {
+      min-width: 20em;
       flex-grow: 1;
       border: none;
-      min-width: 20em;
       font-weight: 300; }
       .main__form .form__input:focus {
         outline: none; }
@@ -106,18 +106,18 @@ img {
     .main__form .form__select {
       padding: 1em;
       border: none;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
       cursor: pointer; }
       .main__form .form__select-option {
         background-color: white; }
 
 .countries {
   display: flex;
+  position: relative;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 10rem 0;
-  position: relative; }
+  margin: 10em 0; }
   @media (max-width: 700px) {
     .countries {
       flex-direction: column;
@@ -129,7 +129,7 @@ img {
     height: auto;
     margin: 1em;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     cursor: pointer; }
     @media (max-width: 1190px) {
@@ -144,8 +144,8 @@ img {
   .countries__image {
     flex-grow: 1; }
     .countries__image-flag {
-      height: 100%;
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
   .countries__description {
     margin: 1em; }
     .countries__description > * {
@@ -157,30 +157,30 @@ img {
     bottom: -10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 1em 2em;
     border: 1px solid black;
     background-color: transparent;
-    padding: 1em 2em;
-    cursor: pointer;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer; }
   .countries__detail {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    justify-content: space-around;
-    position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    position: relative;
+    bottom: 100%;
+    left: 0;
+    justify-content: space-around;
     z-index: 1;
-    padding: 6rem;
+    padding: 6em;
     font-size: 1.3rem; }
     @media (max-width: 700px) {
       .countries__detail {
         flex-direction: column;
         align-items: flex-start;
-        padding: 3rem 1rem; } }
+        padding: 3em 1em; } }
     .countries__detail-name {
       font-size: 2.5rem;
       margin-bottom: 1em; }
@@ -190,11 +190,11 @@ img {
       min-width: 250px; }
     .countries__detail-back {
       position: absolute;
-      top: 0;
+      bottom: 100%;
       left: 0;
-      padding: 1rem 2rem;
+      padding: 1em 2em;
       background-color: white;
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       border: none;
       cursor: pointer; }
@@ -203,10 +203,10 @@ img {
           left: 80%; } }
     .countries__detail .details__description {
       display: flex;
-      width: 60%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 60%;
       justify-content: space-around; }
       @media (max-width: 700px) {
         .countries__detail .details__description {
@@ -232,21 +232,20 @@ img {
             flex-grow: 1; } }
         @media (max-width: 700px) {
           .countries__detail .details__description .details__buttons-title {
+            margin: 0 0 1em 0.5em;
             font-size: 2.5rem;
-            margin-bottom: 1em;
-            margin-left: 0.5em;
             text-align: center; } }
         .countries__detail .details__description .details__buttons .details__button {
-          background-color: white;
           margin: 0 0.5em;
-          padding: 0.7rem 1.2rem;
+          padding: 0.7em 1.2em;
+          background-color: white;
           border: none;
-          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
           border-radius: 5px;
           cursor: pointer; }
           @media (max-width: 700px) {
             .countries__detail .details__description .details__buttons .details__button {
-              padding: 1rem 2rem;
+              padding: 1em 2em;
               margin-top: 1em; } }
       .countries__detail .details__description .details__informations {
         display: flex;
@@ -263,11 +262,9 @@ img {
           @media (max-width: 700px) {
             .countries__detail .details__description .details__informations .details__left {
               width: 100%;
-              margin-left: 0;
-              margin-top: 5em; } }
+              margin: 5em 0 0 0; } }
         .countries__detail .details__description .details__informations .details__right {
-          margin-left: 3em;
-          margin-top: 3.5em; }
+          margin: 3.5em 0 0 3em; }
           .countries__detail .details__description .details__informations .details__right > * {
             margin-bottom: 2em; }
           @media (max-width: 700px) {
@@ -294,10 +291,10 @@ body[data-theme='dark'] {
     body[data-theme='dark'] .main__form .form__search .form__input {
       background-color: inherit;
       color: inherit; }
-  body[data-theme='dark'] .main__form .form__select {
+  body[data-theme='dark'] .main__form .form_-select {
     background-color: #2b3945;
     color: white; }
-    body[data-theme='dark'] .main__form .form__select-option {
+    body[data-theme='dark'] .main__form .form_-select-option {
       background-color: #2b3945; }
   body[data-theme='dark'] .countries__country {
     background-color: #2b3945;

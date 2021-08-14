@@ -4,23 +4,23 @@
 	justify-content: space-between;
 	height: 10vh;
 	min-height: 10vh;
-	padding: 0 10rem;
+	padding: 0 10em;
 	background-color: map-get($lightColors, whiteTheme);
 	box-shadow: 4px 4px 0px 0px map-get($lightColors, boxShadowColors);
 	@include mq(700px) {
-		padding: 0 5rem;
+		padding: 0 5em;
 	}
 	@include mq(440px) {
-		padding: 0 2rem;
+		padding: 0 2em;
 	}
 	&__title {
 		color: map-get($darkColors, darkBlueText);
 	}
 	&__theme {
-		color: map-get($darkColors, veryDarkBlueText);
 		padding: 0.5em;
-		background: transparent;
 		border: none;
+		background: transparent;
+		color: map-get($darkColors, veryDarkBlueText);
 		font-size: 1.4rem;
 		cursor: pointer;
 	}

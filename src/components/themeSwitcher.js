@@ -1,9 +1,12 @@
-export const themeSwitch = themeData => {
-	if (document.body.dataset.theme === 'light') {
-		document.body.dataset.theme = 'dark';
+export const themeSwitch = () => {
+	let themeData = document.body.dataset.theme;
+
+	if (themeData === 'light') {
+		themeData = 'dark';
 		localStorage.setItem('theme', 'dark');
 	} else {
-		document.body.dataset.theme = 'light';
+		themeData = 'light';
 		localStorage.setItem('theme', 'light');
 	}
+	document.body.dataset.theme = themeData;
 };

@@ -22,8 +22,6 @@ const buttonPagination = document.querySelector('[data-pagination]');
 
 document.body.dataset.theme = localStorage.getItem('theme');
 
-const theme = localStorage.getItem('theme');
-
-themeSwitcher.addEventListener('click', () => themeSwitch(theme));
+themeSwitcher.addEventListener('click', themeSwitch);
 
 buttonPagination.addEventListener('click', pagination);

@@ -12,11 +12,7 @@ const countriesAPI = async (pagination = 0) => {
 		}
 		const cities = [...document.querySelectorAll('[data-country]')];
 		cities.forEach(city => {
-			city.addEventListener(
-				'click',
-				() => eachCity(city.dataset.country),
-				false
-			);
+			city.addEventListener('click', () => eachCity(city.dataset.country));
 		});
 	} catch (error) {
 		console.warn(error);
@@ -30,23 +26,21 @@ const createHTMLElement = (element, className, name, before = '') => {
 	return HTMLElement;
 };
 
+const createContainer = className => {
+	const container = document.createElement('div');
+	container.classList.add(className);
+	return container;
+};
+
 const renderCountries = async ({ flag, name, population, region, capital }) => {
-	const countriesCountry = document.createElement('div');
-	countriesCountry.classList.add('countries__country');
+	const countriesCountry = createContainer('countries__country');
 	countriesCountry.dataset.country = name;
-
-	const countryImage = document.createElement('div');
-	countryImage.classList.add('countries__image');
-
+	const countryImage = createContainer('countries__image');
 	const countryFlag = document.createElement('img');
 	countryFlag.classList.add('countries__image-flag');
 	countryFlag.setAttribute('src', flag);
-
-	const countryDescription = document.createElement('div');
-	countryDescription.classList.add('countries__description');
-
+	const countryDescription = createContainer('countries__description');
 	const countryName = createHTMLElement('h2', 'countries__name', name);
-
 	const countryPopulation = createHTMLElement(
 		'p',
 		'countries__population',

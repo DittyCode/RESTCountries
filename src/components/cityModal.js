@@ -1,18 +1,16 @@
 import { createHTMLElement, createContainer } from './countriesAPI';
-import { error } from './errorApi';
 
 const modalContainer = document.querySelector('.main');
 
 export const eachCity = async cityName => {
 	try {
-		const URL = `https://restcountries.eu/rest/v2/name/${cityName}`;
+		const apiName = cityName.length <= 3 ? 'alpha' : 'name';
+		const URL = `https://restcountries.eu/rest/v2/${apiName}/${cityName}`;
 		const response = await fetch(URL);
 		const data = await response.json();
 		await managementContainer('none');
-		await renderModal(data[0]);
+		await renderModal(Array.isArray(data) ? data[0] : data);
 	} catch {
-		await managementContainer('flex');
-		await error();
 		console.warn(`API dont have data about this country.`);
 	}
 };

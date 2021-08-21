@@ -7,7 +7,9 @@ const countriesAPI = async (pagination = 0) => {
 		const URL = `https://restcountries.eu/rest/v2/all`;
 		const response = await fetch(URL);
 		const data = await response.json();
-		data.forEach(async el => await renderCountries(el));
+		data.forEach(async (el, i) => {
+			if (i < 12) await renderCountries(el);
+		});
 		const cities = [...document.querySelectorAll('[data-country]')];
 		cities.forEach(city => {
 			city.addEventListener('click', () => eachCity(city.dataset.country));

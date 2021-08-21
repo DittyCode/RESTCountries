@@ -39,9 +39,10 @@
 							type="text"
 							placeholder="Search for a country..."
 							class="form__input"
+							data-search
 						/>
 					</div>
-					<select name="regions" class="form__select">
+					<select name="regions" class="form__select" data-regionFilter>
 						<option class="form__select-option" value="">
 							Filter by region
 						</option>
@@ -53,9 +54,9 @@
 					</select>
 				</form>
 				<div class="countries">
-					<button class="countries__pagination" data-pagination>
+					<!-- <button class="countries__pagination" data-pagination>
 						Load more..
-					</button>
+					</button> -->
 				</div>
 			</main>
 		</div>

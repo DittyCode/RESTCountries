@@ -7,9 +7,7 @@ const countriesAPI = async (pagination = 0) => {
 		const URL = `https://restcountries.eu/rest/v2/all`;
 		const response = await fetch(URL);
 		const data = await response.json();
-		for (let i = pagination; i < pagination + 12; i++) {
-			await renderCountries(data[i]);
-		}
+		data.forEach(async el => await renderCountries(el));
 		const cities = [...document.querySelectorAll('[data-country]')];
 		cities.forEach(city => {
 			city.addEventListener('click', () => eachCity(city.dataset.country));
@@ -35,6 +33,7 @@ const createContainer = className => {
 const renderCountries = async ({ flag, name, population, region, capital }) => {
 	const countriesCountry = createContainer('countries__country');
 	countriesCountry.dataset.country = name;
+	countriesCountry.dataset.region = region;
 	const countryImage = createContainer('countries__image');
 	const countryFlag = document.createElement('img');
 	countryFlag.classList.add('countries__image-flag');

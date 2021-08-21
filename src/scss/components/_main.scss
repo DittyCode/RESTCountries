@@ -21,6 +21,7 @@
 			display: flex;
 			@include flex();
 			justify-content: space-between;
+			min-height: 5em;
 			@include WH(40%, 5vh);
 			background-color: map-get($lightColors, whiteTheme);
 			box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;

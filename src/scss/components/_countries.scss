@@ -116,7 +116,8 @@
 			.details__buttons {
 				display: flex;
 				@include flex();
-				justify-content: space-around;
+				flex-wrap: wrap;
+				justify-content: space-between;
 				margin-top: 1em;
 				width: 90%;
 				@include mq(700px) {

@@ -19,6 +19,9 @@
 		&:hover {
 			transform: scale(1.2);
 		}
+		@include mq(440px) {
+			font-size: 1.5rem;
+		}
 	}
 	&__theme {
 		padding: 0.5em;

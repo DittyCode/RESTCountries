@@ -1,5 +1,4 @@
 import { countriesAPI } from './components/countriesAPI';
-import { pagination } from './components/pagination';
 import { searchCountries } from './components/searchCountry';
 import { themeSwitch } from './components/themeSwitcher';
 import { regionFilterCountries } from './components/regionFilter';
@@ -24,9 +23,9 @@ const buttonPagination = document.querySelector('[data-pagination]');
 const searchInput = document.querySelector('[data-search]');
 const regionFilter = document.querySelector('[data-regionFilter]');
 
-regionFilter.addEventListener('change', e => regionFilterCountries(e.target));
-
 searchInput.value = '';
+
+regionFilter.addEventListener('change', e => regionFilterCountries(e.target));
 
 searchInput.addEventListener('input', e => searchCountries(e.target));
 

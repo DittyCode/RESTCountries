@@ -46,6 +46,9 @@ img {
     transition: 0.3s; }
     .header__title:hover {
       transform: scale(1.2); }
+    @media (max-width: 440px) {
+      .header__title {
+        font-size: 1.5rem; } }
   .header__theme {
     padding: 0.5em;
     border: none;
@@ -131,10 +134,10 @@ img {
     height: auto;
     margin: 1em;
     background-color: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s; }
+    transition: 0.3s;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2); }
     .countries__country:hover {
       transform: scale(1.05); }
     @media (max-width: 1190px) {
@@ -199,7 +202,7 @@ img {
       left: 0;
       padding: 1em 2em;
       background-color: white;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       border: none;
       cursor: pointer; }
@@ -245,7 +248,7 @@ img {
           padding: 0.7em 1.2em;
           background-color: white;
           border: none;
-          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2);
           border-radius: 5px;
           cursor: pointer; }
           @media (max-width: 700px) {

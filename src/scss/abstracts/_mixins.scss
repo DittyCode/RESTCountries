@@ -20,3 +20,7 @@
 	bottom: $bottom;
 	left: $left;
 }
+
+@mixin box-shadow($h: 10px, $v: 10px, $b: 0px, $s: 0px, $c: #000000) {
+	box-shadow: $h $v $b $s $c;
+}

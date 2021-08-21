@@ -1,4 +1,5 @@
 import { createHTMLElement, createContainer } from './countriesAPI';
+import { error } from './errorApi';
 
 const modalContainer = document.querySelector('.main');
 
@@ -11,6 +12,7 @@ export const eachCity = async cityName => {
 		await renderModal(data[0]);
 	} catch {
 		await managementContainer('flex');
+		await error();
 		console.warn(`API dont have data about this country.`);
 	}
 };
